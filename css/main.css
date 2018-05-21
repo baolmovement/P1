@@ -1,0 +1,53 @@
+h1{ 
+    font-family: 'dancing script';
+    text-align:center;   
+    font-size: 150px;   
+    margin: 0 auto;    
+    padding-bottom: 25px; 
+    color:white;
+    
+} 
+button{     
+    font-family: 'dancing script';
+    font-size:20px;   
+    width:200px; 
+    height:50px; 
+    border-radius:10px; 
+    background-color: pink; 
+    color: white; 
+    margin:20px 0 0 5px; 
+    text-align: center;     
+}   
+header{
+    background-image:url("../images/larrydavid.jpg"); 
+    margin: 0 auto; 
+    height: 400px;
+}
+body{
+    text-align: center; 
+    background-color:black;
+}   
+h2{ 
+    font-family: 'Press Start 2P';
+    background-color: #7A8E74; 
+    padding:20px 0; 
+    margin-top: 0;
+}
+h3{ 
+    font-family: 'Press Start 2P';
+    display:inline-block; 
+    margin: 0 20px; 
+    background-color:black;
+    color:white; 
+    padding:20px; 
+    border: 3px dotted white;
+} 
+
+.gameboard{
+    margin-top:50px; 
+    border: 10px solid white;
+    padding: 75px 0; 
+}   
+.gameboard, img{
+    border-radius: 15px;
+}
