@@ -5,7 +5,10 @@ var $p1Score= $("#p1Score")
 var $p2Score=$("#p2Score")   
 var $h3=$("h3")   
 var boardSpots=$gameboard.children() 
-var $rules=$("#rules")
+var $rules=$(".rules") 
+var $audio=$("audio") 
+
+// $audio.slideUp()
 
 $gameboard.slideUp() 
 
@@ -15,7 +18,11 @@ $button.on("click", function(){
     $gameboard.slideDown() 
     $p1Score.text(0) 
     $p2Score.text(0) 
-    randoPosition();
+    rando();
+}) 
+
+$gameboard.on("click","img",function(){
+    
 })
 
 const gameBoard = [
@@ -43,5 +50,20 @@ const gameBoard = [
     { imgPath: "images/trump.png", pointValue: -1 },
     { imgPath: "images/vandal.png", pointValue: -1 },
     { imgPath: "images/vote.png", pointValue: -1 }, 
-    { imgPath: "images/cheating.png", pointValue: -500 }
-] 
+    { imgPath: "images/cheating.png", pointValue: -500 } 
+]   
+
+//remove random objects from object array 
+//push those random objects into new object array called shuffleddeck  
+//create new variable equal to "return shuffleddeck"
+//append that variable onto $gameboard
+function rando(){   
+    var shuffledDeck=[] 
+    for(var i=0;i<25;i++){  
+        var randoNum=Math.floor(Math.random() * gameBoard.length) 
+        let card = gameBoard.splice(randoNum,1) 
+        shuffledDeck.push(card[0]);    
+        let img=`<img src="${shuffledDeck[i].imgPath}">` 
+        $gameboard.append(img)
+    }
+}

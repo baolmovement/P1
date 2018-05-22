@@ -59,10 +59,54 @@ h3{
     margin:2px 3px;
 }
 
-#rules{
+.rules{
     text-align:center; 
-    color:white; 
+    color:white;     
+    width:1580px; 
+    margin:0 auto;   
+    padding:100px 0 0 0; 
 }
-strong{
-    font-size:70px;
+strong{ 
+    font-family: 'Press Start 2P';
+    font-size:30px; 
+    color:red;
+}   
+
+p{ 
+    font-family: 'Press Start 2P';
+    font-size:30px;   
+    line-height:50px;  
+}
+
+ol{
+    list-style-position: inside;    
+    text-align:center; 
+    position:relative; 
+    
+}
+
+.rules li{
+    font-size:40px; 
+    color:yellow;   
+    padding:0; 
+    text-align:left;
+}   
+
+#luck{ 
+    font-size: 60px;
+    font-family: 'dancing script'; 
+    line-height:70px;
+} 
+.rules img{
+    margin:0 20px;   
+    border-radius:15px;
+}   
+.rules #green{
+    border:15px solid green;
+}
+.rules #red{
+    border:15px solid red;
+}
+.rules p{
+    text-align:left;
 }
