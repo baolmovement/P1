@@ -1,3 +1,4 @@
+/* top elements */
 h1{ 
     font-family: 'dancing script';
     text-align:center;   
@@ -5,7 +6,6 @@ h1{
     margin: 0 auto;    
     padding-bottom: 25px; 
     color:white;
-    
 } 
 button{     
     font-family: 'dancing script';
@@ -28,8 +28,11 @@ header{
 body{
     text-align: center; 
     background-color:black; 
-    max-width: cover;
-}   
+    max-width: cover; 
+}
+
+
+/* sub top elements */
 h2{ 
     font-family: 'Press Start 2P';
     background-color: #7A8E74; 
@@ -46,6 +49,8 @@ h3{
     border: 3px dotted white;
 } 
 
+
+/* middle elements */
 .gameboard{ 
     border: 10px solid white;
     width: 1100px;
@@ -57,8 +62,9 @@ h3{
     border:5px solid white;
     display: hidden;   
     margin:2px 3px;
-}
+} 
 
+/* bottom elements */
 .rules{
     text-align:center; 
     color:white;     
@@ -109,4 +115,5 @@ ol{
 }
 .rules p{
     text-align:left;
-}
+} 
+

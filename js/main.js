@@ -1,30 +1,31 @@
+//Global Player Variables & Functions
+var player1 = {
+    name: "PLAYER 1",
+    score: 0,
+    scoreBoard: $("#p1Score") 
+}
+var player2 = {
+    name: "PLAYER 2",
+    score: 0,
+    scoreBoard: $("#p2Score") 
+}
+var currentPlayer = player1 
+function switchTurns() {
+    if(currentPlayer === player1) {
+        currentPlayer = player2
+    } else {
+        currentPlayer = player1
+    }
+}
+// Global Gameboard Variables
 var $gameboard=$(".gameboard") 
 var $m1=$(".m1")  
 var $button=$("button") 
-var $p1Score= $("#p1Score") 
-var $p2Score=$("#p2Score")   
-var $h3=$("h3")   
-var boardSpots=$gameboard.children() 
-var $rules=$(".rules") 
-var $audio=$("audio") 
-
-// $audio.slideUp()
-
-$gameboard.slideUp() 
-
-
-$button.on("click", function(){  
-    $rules.fadeOut()
-    $gameboard.slideDown() 
-    $p1Score.text(0) 
-    $p2Score.text(0) 
-    rando();
-}) 
-
-$gameboard.on("click","img",function(){
-    
-})
-
+var $p1ScoreBoard= $("#p1Score") 
+var $p2ScoreBoard=$("#p2Score") 
+var $h3=$("h3")    
+var $rules=$(".rules")  
+var music = new Audio("audio/FrankSinatra-LoveAndMarriage(+lyrics)[HD].mp3") 
 const gameBoard = [
     { imgPath: "images/anniversary.png", pointValue: 500 }, 
     { imgPath: "images/badbusiness.png", pointValue: -2 },
@@ -51,19 +52,49 @@ const gameBoard = [
     { imgPath: "images/vandal.png", pointValue: -1 },
     { imgPath: "images/vote.png", pointValue: -1 }, 
     { imgPath: "images/cheating.png", pointValue: -500 } 
-]   
+]     
 
-//remove random objects from object array 
-//push those random objects into new object array called shuffleddeck  
-//create new variable equal to "return shuffleddeck"
-//append that variable onto $gameboard
+
+
+// Automatic Settings
+$gameboard.slideUp()  
+music.loop = true 
+
+//Game Start
+$button.on("click", function(){
+    music.currentTime = 0   
+    music.play()
+    $rules.fadeOut()
+    $gameboard.slideDown() 
+    player1.scoreBoard.text(player1.score) 
+    player2.scoreBoard.text(player2.score) 
+    rando(); 
+    setTimeout(function(){ 
+        $(".gameboard img").animate({opacity: 0})
+    },4000) 
+    //if either scoreboard is >= 425, #gameAnnouncement reads 'you're a good couple, but [highscorer] is pulling all the weight' + resets 
+    //if either scoreboard is <= -425, #gameAnnoucement reads 'doomed relationship, but [highscorer] will find someone else' +  resets
+}) 
+
 function rando(){   
     var shuffledDeck=[] 
     for(var i=0;i<25;i++){  
         var randoNum=Math.floor(Math.random() * gameBoard.length) 
         let card = gameBoard.splice(randoNum,1) 
         shuffledDeck.push(card[0]);    
-        let img=`<img src="${shuffledDeck[i].imgPath}">` 
-        $gameboard.append(img)
+        let $img = $('<img>').attr('src', shuffledDeck[i].imgPath)
+        $img.data('pointValue', shuffledDeck[i].pointValue)
+        $gameboard.append($img)
     }
-}
+} 
+
+// Gameplay & Scoring
+$gameboard.on("click","img",function(){
+    $(this).animate({opacity: 1})   
+    currentPlayer.score += $(this).data('pointValue')
+    currentPlayer.scoreBoard.text(currentPlayer.score)
+    switchTurns()
+})   
+
+
+

@@ -8,25 +8,26 @@
     <title>Newly Weds</title>
 </head>
 <body> 
-    <audio controls autoplay> 
+    <!-- audio autoplay loop -->
+    <!-- <audio controls autoplay loop> 
        <source src="audio/Frank Sinatra - Love And Marriage (+lyrics) [HD].mp3" type="audio/mpeg">
-    </audio>
-    
+    </audio> -->
+    <!-- header with start game button -->
     <header>
         <h1>Newly Weds</h1>  
         <button>Start Game</button> 
     </header>
-    
+    <!-- scoreboards+announcement -->
     <h2 id="Announcement">Game Announcement</h2> 
     <h3 id="p1Score">Player 1 Score</h3><h3 id="p2Score">Player 2 Score</h3> 
-
+    <!-- gameboard -->
     <div class="gameboard">  
-    </div>   
-    
+    </div>     
+    <!-- rules -->
     <section class="rules"> 
         <strong>READ (BELOW) BEFORE CLICKING "START GAME" BUTTON</strong> 
         <p>
-            Players will have 2 seconds to memorize card positions before they're flipped <br>
+            Players will have 3 seconds to memorize card positions before they're flipped <br>
             Every card has a  value ranging from -3 to 3 points<br>
             The game will end when a player clicks... 
         </p>   
@@ -34,7 +35,7 @@
         <p>Turns alternate between clicks</p>
         <p id="luck">You can win/lose as a team or win/lose as an individual.<br>Good Luck!</p>
     </section>
-
+    <!-- javascript -->
     <script src = "js/main.js"></script>    
 </body>
 </html>
