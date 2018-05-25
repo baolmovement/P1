@@ -1,14 +1,14 @@
-#Wireframe: The Beginning
+# Wireframe: The Beginning
 ![](https://i.imgur.com/HLNAq3j.png) 
-#Design & Gameplay (Snapshots) 
-###"Start Page"
+# Design & Gameplay (Snapshots) 
+### "Start Page"
 ![](https://i.imgur.com/xiCkAY8.png)  
-###"Gameplay" 
+### "Gameplay" 
 ![](https://i.imgur.com/z8MzWFf.png) 
-###"Game Ends" 
+### "Game Ends" 
 ![](https://i.imgur.com/LIMsXeL.png)
-#**Newly Weds** 
-###*A game in which 2 players can work together, or against each other*  
+# **Newly Weds** 
+### *A game in which 2 players can work together, or against each other*  
 --- 
 *You can win as a team, where the low score holder will receive some words of endearment*
 
@@ -17,7 +17,7 @@
 *You can lose as a team, but the high score holder will receive an individual win*
 
 --- 
-#Game Instructions 
+# Game Instructions 
 1. Read instructions on start page. 
 2. Strategize, or not, with other player. 
 3. Click "Start Game" button. 
@@ -29,8 +29,8 @@
 
 --- 
 
-#Approach 
-###*Languages used: HTML, CSS, Vanilla JS, jQuery*  
+# Approach 
+### *Languages used: HTML, CSS, Vanilla JS, jQuery*  
 HTML -- Pretty skeletal because I wanted elements to be dynamically. The longest HTML code is in the `<section class="rules></section>` because that is a static component to the design.  
 
 CSS -- KISS: Only played around with <10 properties for the many present selectors. I didn't plan on setting CSS property values dynamically because I thought it would be distracting. 
