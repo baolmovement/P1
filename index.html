@@ -8,10 +8,6 @@
     <title>Newly Weds</title>
 </head>
 <body> 
-    <!-- audio autoplay loop -->
-    <!-- <audio controls autoplay loop> 
-       <source src="audio/Frank Sinatra - Love And Marriage (+lyrics) [HD].mp3" type="audio/mpeg">
-    </audio> -->
     <!-- header with start game button -->
     <header>
         <h1>Newly Weds</h1>  
@@ -27,12 +23,19 @@
     <section class="rules"> 
         <strong>READ (BELOW) BEFORE CLICKING "START GAME" BUTTON</strong> 
         <p>
-            Players will have 3 seconds to memorize card positions before they're flipped <br>
+            Players will have 5 seconds to memorize card positions before they're flipped <br>
             Every card has a  value ranging from -3 to 3 points<br>
             The game will end when a player clicks... 
         </p>   
-        <img src="images/anniversary.png" alt id="green"> <img src="images/cheating.png" alt id="red">  
-        <p>Turns alternate between clicks</p>
+        <img src="images/anniversary.png" alt id="green"><p id="or">OR</p> <img src="images/cheating.png" alt id="red">  
+        <p id="scorelegend">
+                "1 Year Anniversary" card = 50 points || "Caught Cheating" cards = -50 points
+        </p>
+        <p> 
+            Turns alternate between clicks <br>
+            Game ends when a player scores 50, or more, points or 50, or less, points <br>
+            Game results will appear in "Game Announcement" bar
+        </p>
         <p id="luck">You can win/lose as a team or win/lose as an individual.<br>Good Luck!</p>
     </section>
     <!-- javascript -->

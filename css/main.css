@@ -2,28 +2,33 @@
 h1{ 
     font-family: 'dancing script';
     text-align:center;   
-    font-size: 150px;   
+    font-size: 200px;   
     margin: 0 auto;    
     padding-bottom: 25px; 
-    color:white;
+    color:red; 
+    -webkit-text-stroke: 2px white;
 } 
 button{     
     font-family: 'dancing script';
-    font-size:20px;   
-    width:200px; 
-    height:50px; 
+    font-size:40px;   
+    width:400px; 
+    height:100px; 
     border-radius:10px; 
     background-color: pink; 
     color: white; 
-    margin:20px 0 0 5px; 
+    margin:110px 0 0 5px; 
     text-align: center;     
-}   
+}     
+button:hover{ 
+    color:green; 
+    background-color:white; 
+}
 header{
-    background-image:url("../images/larrydavid.jpg"); 
+    background-image:url("../images/headerimg3.png"); 
     background-repeat: no-repeat;
     background-size: 100%; 
     margin: 0 auto; 
-    height: 400px; 
+    height: 650px; 
 }
 body{
     text-align: center; 
@@ -102,7 +107,17 @@ ol{
     font-size: 60px;
     font-family: 'dancing script'; 
     line-height:70px;
+}   
+
+#scorelegend{ 
+    font-size:10px;
+    color:yellow; 
+    text-align:center; 
 } 
+#or{
+    display:inline; 
+    margin:0 50px;  
+}
 .rules img{
     margin:0 20px;   
     border-radius:15px;
@@ -115,5 +130,11 @@ ol{
 }
 .rules p{
     text-align:left;
-} 
+}   
+.end{
+    height:1000px;
+    font-size:30px; 
+    line-height:1000px;
+    vertical-align:middle;
+}
 
