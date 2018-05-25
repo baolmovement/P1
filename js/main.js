@@ -80,7 +80,7 @@ function rando(){
         { imgPath: "images/balenciaga2.png", pointValue: -1 },
         { imgPath: "images/brokenleg3.png", pointValue: -2 },
         { imgPath: "images/burglar2.png", pointValue: -2 },
-        { imgPath: "images/cheating.png", pointValue: -500 },
+        { imgPath: "images/cheating.png", pointValue: -50 },
         { imgPath: "images/doodle2.png", pointValue: 3 },
         { imgPath: "images/fenderbender2.png", pointValue: -2 },
         { imgPath: "images/grandma2.png", pointValue: 1 },
